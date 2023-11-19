@@ -22,6 +22,8 @@ jobs:
 
       - uses: Xotabu4/selenoid-github-action@v2
       - run: ./gradlew clean test
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: Copy History
         uses: actions/checkout@v2
         if: always()
