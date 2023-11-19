@@ -16,7 +16,6 @@ public class GitHubTest {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.remote = "https://localhost:4444/wd/hub";
         Configuration.holdBrowserOpen = false;
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
@@ -24,6 +23,7 @@ public class GitHubTest {
 
     @Test
     public void searchForIssueTest2() {
+        Configuration.remote = "https://localhost:4444/wd/hub";
         SelenideLogger.addListener("Allure", new AllureSelenide());
 
         open("https://github.com");
